@@ -50,61 +50,76 @@
         header .btn:hover {
             background-color: #e5c100;
         }
+/* Developer Section */
+.developer-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    text-align: center;
+    flex-wrap: wrap;  /* Ensure it wraps nicely on smaller screens */
+}
 
-        .developer-section {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 40px;
-            text-align: center;
-        }
+.developer-info {
+    max-width: 600px;
+    margin-left: 20px;
+    text-align: left;  /* Align text to the left for better readability */
+}
 
-        .developer-info {
-            max-width: 600px;
-            margin-left: 20px;
-        }
+.developer-info h3 {
+    font-size: 30px;
+    color: #ffd700;
+    margin-bottom: 10px;  /* Reduced margin for better spacing */
+}
 
-        .developer-info h3 {
-            font-size: 30px;
-            color: #ffd700;
-            margin-bottom: 15px;
-        }
+.developer-info p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
 
-        .developer-info p {
-            font-size: 16px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
+.developer-info .btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: #000;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
 
-        .developer-info .btn {
-            padding: 12px 25px;
-            font-size: 16px;
-            background-color: #ffd700;
-            color: #000;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: background-color 0.3s;
-        }
+.developer-info .btn:hover {
+    background-color: #e5c100;
+}
 
-        .developer-info .btn:hover {
-            background-color: #e5c100;
-        }
+.developer-info img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;  /* Added margin to separate from text */
+}
 
-        .developer-info img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        }
+/* Responsive Design for Developer Section */
+@media (max-width: 768px) {
+    .developer-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;  /* Center text on smaller screens */
+    }
 
-        .product-section {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            padding: 50px 20px;
-        }
+    .developer-info img {
+        width: 120px;  /* Make the image smaller on mobile */
+        height: 120px;
+    }
+
+    .developer-section {
+        flex-direction: column;  /* Stack items vertically on small screens */
+        align-items: center;
+    }
+}
+      
 
         /* Product Box */
         .product-box {
@@ -267,7 +282,7 @@
             <p>
                 A JavaScript-based script to enhance your WhatsApp experience with dynamic, interactive features.
             </p>
-            <a href="./produk/produk1.html" target="_blank">View Details</a>
+            <a href="produk1.html" target="_blank">View Details</a>
             <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%201" target="_blank">Order via WhatsApp</a>
         </div>
 
