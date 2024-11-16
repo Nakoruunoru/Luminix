@@ -1,140 +1,329 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luminix AI</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Home - Product Showcase</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #2a2a2a, #111);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #111;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-size: 50px;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 20px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        header .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #000;
+            background-color: #ffd700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        header .btn:hover {
+            background-color: #e5c100;
+        }
+
+        .developer-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .developer-info {
+            max-width: 600px;
+            margin-left: 20px;
+        }
+
+        .developer-info h3 {
+            font-size: 30px;
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+
+        .developer-info p {
+            font-size: 16px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .developer-info .btn {
+            padding: 12px 25px;
+            font-size: 16px;
+            background-color: #ffd700;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+
+        .developer-info .btn:hover {
+            background-color: #e5c100;
+        }
+
+        .developer-info img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 50px 20px;
+        }
+
+        /* Product Box */
+        .product-box {
+            background: linear-gradient(145deg, #222, #111);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .product-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .product-box img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #444;
+        }
+
+        .product-box h3 {
+            font-size: 20px;
+            color: #ffd700;
+            margin: 15px 0;
+        }
+
+        .product-box p {
+            font-size: 15px;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .product-box a {
+            display: inline-block;
+            background: linear-gradient(90deg, #ffd700, #e5c100);
+            color: #000;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 30px;
+            font-size: 16px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .product-box a:hover {
+            background: linear-gradient(90deg, #e5c100, #ffd700);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+            }
+
+            .developer-info {
+                margin-left: 0;
+                margin-top: 20px;
+                text-align: left;
+            }
+
+            .product-box {
+                width: 100%;
+            }
+
+            .product-box h3 {
+                font-size: 18px;
+            }
+        }
+        /* About Section */
+        .about-section {
+            padding: 50px 20px;
+            text-align: center;
+            background: #111;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1rem;
+            color: #ccc;
+            margin: 0 auto 40px;
+            max-width: 700px;
+            line-height: 1.8;
+        }
+
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-box {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 280px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .feature-box img {
+            width: 60px;
+            margin-bottom: 15px;
+        }
+
+        .feature-box h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .feature-box p {
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Luminix<span>Bot</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="./produk/produk.html">Features</a></li>
-                <li><a href="./produk/kontak.html">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Our Product Showcase</h1>
+        <p>Discover the best tools and scripts to enhance your projects and server management.</p>
+        <a href="#products" class="btn">Explore Products</a>
     </header>
-<section class="hero">
-    <div class="hero-content">
-        <h1>Elevate Your Ideas with <span>Luminix Bot</span></h1>
-        <p>The ultimate Bot-powered solution for innovation and growth. Discover endless possibilities with precision-driven tools.</p>
-        <button class="cta-btn">Explore Now</button>
-    </div>
-</section>
 
-    <section id="features" class="features">
-        <h2>Our Premium Features</h2>
-        <div class="feature-cards">
-            <div class="card">
-                <h3>Whatsapp Bot Automation</h3>
-                <p>Seamlessly automate complex tasks with cutting-edge algorithms.</p>
-            </div>
-            <div class="card">
-                <h3>Data Insights</h3>
-                <p>Gain actionable insights from your data effortlessly.</p>
-            </div>
-            <div class="card">
-                <h3>Custom Solutions</h3>
-                <p>Tailored AI solutions designed for your unique business needs.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="premium" class="premium-plans">
-        <h2>Choose Your Premium Plan</h2>
-        <div class="plan-cards">
-            <div class="plan-card">
-                <h3>Basic Plan</h3>
-                <p>$19/month</p>
-                <ul>
-                    <li>Access to AI Automation</li>
-                    <li>Basic Data Insights</li>
-                    <li>Email Support</li>
-                </ul>
-                <button class="cta-btn">Subscribe Now</button>
-            </div>
-            <div class="plan-card">
-                <h3>Advanced Plan</h3>
-                <p>$49/month</p>
-                <ul>
-                    <li>Advanced AI Automation</li>
-                    <li>Enhanced Data Insights</li>
-                    <li>Priority Support</li>
-                </ul>
-                <button class="cta-btn">Subscribe Now</button>
-            </div>
-            <div class="plan-card">
-                <h3>Enterprise Plan</h3>
-                <p>$99/month</p>
-                <ul>
-                    <li>Custom AI Solutions</li>
-                    <li>Dedicated Account Manager</li>
-                    <li>24/7 Support</li>
-                </ul>
-                <button class="cta-btn">Contact Us</button>
-            </div>
-        </div>
-    </section>
-
-    <section id="pterodactyl" class="pterodactyl">
-    <h2>Buy Pterodactyl Servers</h2>
-    <p>Choose the perfect Pterodactyl server to run your AI-powered applications and grow your business.</p>
-    <div class="server-plans">
-        <div class="server-plan">
-            <h3>Basic Server</h3>
-            <p>$10/month</p>
-            <ul>
-                <li>1 CPU Core</li>
-                <li>2 GB RAM</li>
-                <li>20 GB SSD Storage</li>
-            </ul>
-            <a href="https://wa.me/+18148012005?text=I%20would%20like%20to%20buy%20the%20Basic%20Server" target="_blank">
-                <button class="cta-btn">Buy Now</button>
-            </a>
-        </div>
-        <div class="server-plan">
-            <h3>Advanced Server</h3>
-            <p>$30/month</p>
-            <ul>
-                <li>2 CPU Cores</li>
-                <li>4 GB RAM</li>
-                <li>50 GB SSD Storage</li>
-            </ul>
-            <a href="https://wa.me/+18148012005?text=I%20would%20like%20to%20buy%20the%20Advanced%20Server" target="_blank">
-                <button class="cta-btn">Buy Now</button>
-            </a>
-        </div>
-        <div class="server-plan">
-            <h3>Pro Server</h3>
-            <p>$60/month</p>
-            <ul>
-                <li>4 CPU Cores</li>
-                <li>8 GB RAM</li>
-                <li>100 GB SSD Storage</li>
-            </ul>
-            <a href="https://wa.me/+18148012005?text=I%20would%20like%20to%20buy%20the%20Pro%20Server" target="_blank">
-                <button class="cta-btn">Buy Now</button>
-            </a>
+    <!-- Developer Section -->
+    <div class="developer-section">
+        <img src="https://pomf2.lain.la/f/lkccsrgz.png" alt="Developer Image">
+        <div class="developer-info">
+            <h3>Meet the Developer</h3>
+            <p>Our developer, with years of experience in web development and automation, creates high-quality scripts and tools. Feel free to reach out for more information or custom requests!</p>
+            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20developer" class="btn">Contact Developer</a>
         </div>
     </div>
-</section>
 
-    <section id="about" class="about">
-        <h2>About Luminix AI</h2>
-        <p>Luminix AI is a pioneer in delivering intelligent solutions that empower businesses to excel in the modern world. Our mission is to simplify AI for everyone.</p>
-    </section>
+    <!-- Products Section -->
+    <div class="product-section" id="products">
+        <!-- Product 1 -->
+        <div class="product-box">
+            <img src="https://pomf2.lain.la/f/wrqhcsvu.png" alt="Script Luminix">
+            <h3>Script Luminix</h3>
+            <p>
+                A JavaScript-based script to enhance your WhatsApp experience with dynamic, interactive features.
+            </p>
+            <a href="produk1.html" target="_blank">View Details</a>
+            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%201" target="_blank">Order via WhatsApp</a>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Luminix AI. All Rights Reserved.</p>
-    </footer>
+        <!-- Product 2 -->
+        <div class="product-box">
+            <img src="https://pomf2.lain.la/f/bp9b2o8m.png" alt="Pterodactyl Panel">
+            <h3>Pterodactyl Panel</h3>
+            <p>
+                Manage your game servers and applications with this open-source platform.
+            </p>
+            <a href="product2.html" target="_blank">View Details</a>
+            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%202" target="_blank">Order via WhatsApp</a>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Product 3 -->
+        <div class="product-box">
+            <img src="https://pomf2.lain.la/f/62hkz97u.jpg" alt="Luminix Bot Order">
+            <h3>Luminix Bot Order</h3>
+            <p>
+                Rent Luminix Bot to make your group secure, organized, and interactive.
+            </p>
+            <a href="product3.html" target="_blank">View Details</a>
+            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%203" target="_blank">Order via WhatsApp</a>
+        </div>
+    </div>
+  <!-- About Section -->
+    <div class="about-section" id="about">
+        <h2>About Luminix</h2>
+        <p>
+            Luminix is dedicated to providing innovative tools and services for your digital needs. 
+            From modern scripts to reliable server panels and versatile bots, our mission is to enhance your online experience.
+        </p>
+        <div class="features-container">
+            <!-- Feature 1 -->
+            <div class="feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/2468/2468197.png" alt="Icon 1">
+                <h3>Advanced Tools</h3>
+                <p>
+                    Explore cutting-edge tools designed for seamless integration and optimal performance across various platforms.
+                </p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/1645/1645266.png" alt="Icon 2">
+                <h3>Secure Panels</h3>
+                <p>
+                    Manage your servers with our secure, reliable, and user-friendly panels tailored to your needs.
+                </p>
+            </div>
+            <div class="feature-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/3875/3875142.png" alt="Icon 2">
+                <h3>Secure Panels</h3>
+                <p>
+                    Manage your servers with our secure, reliable, and user-friendly panels tailored to your needs.
+                </p>
+            </div>
+      
 </body>
-</html>
-
-
-
-
+        </html>
