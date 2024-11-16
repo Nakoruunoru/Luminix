@@ -51,25 +51,26 @@
             background-color: #e5c100;
         }
 /* Developer Section */
+ /* Developer Section */
 .developer-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     text-align: center;
-    flex-wrap: wrap;  /* Ensure it wraps nicely on smaller screens */
+    flex-wrap: wrap;
 }
 
 .developer-info {
     max-width: 600px;
     margin-left: 20px;
-    text-align: left;  /* Align text to the left for better readability */
+    text-align: left;
 }
 
 .developer-info h3 {
     font-size: 30px;
     color: #ffd700;
-    margin-bottom: 10px;  /* Reduced margin for better spacing */
+    margin-bottom: 10px;
 }
 
 .developer-info p {
@@ -94,12 +95,30 @@
 
 .developer-info img {
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;  /* Reduced image size */
+    height: 100px;  /* Reduced image size */
     object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;  /* Added margin to separate from text */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;  /* Added margin for spacing */
 }
+
+/* Responsive Design for Developer Section */
+@media (max-width: 768px) {
+    .developer-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .developer-info img {
+        width: 80px;  /* Smaller image size for mobile */
+        height: 80px;  /* Smaller image size for mobile */
+    }
+
+    .developer-section {
+        flex-direction: column;
+        align-items: center;
+    }
 
 /* Responsive Design for Developer Section */
 @media (max-width: 768px) {
