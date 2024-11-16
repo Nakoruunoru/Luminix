@@ -3,84 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Menu</title>
+    <title>Script Luminix Details</title>
     <style>
+        /* Global Styling */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #000;
+            background: linear-gradient(135deg, #1a1a1a, #000);
             color: #fff;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
         }
-        .product-box {
-            background-color: #111;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 300px;
+
+        /* Container Styling */
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
             padding: 20px;
+            background: #111;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
             text-align: center;
         }
-        .product-box img {
+
+        /* Heading Styling */
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #ffd700, #e5c100);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Image Styling */
+        .image-container img {
             width: 100%;
-            height: 200px;
+            max-height: 400px;
             object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 15px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
         }
-        .product-box h3 {
-            font-size: 20px;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-        .product-box p {
-            font-size: 14px;
+
+        /* Paragraph Styling */
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
             color: #ccc;
-            margin-bottom: 15px;
+            text-align: justify;
+            margin-bottom: 20px;
         }
-        .product-box a {
+
+        /* Button Styling */
+        .cta-button {
             display: inline-block;
-            background-color: #ffd700;
+            background: linear-gradient(90deg, #ffd700, #e5c100);
             color: #000;
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
+            padding: 12px 20px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .product-box a:hover {
-            background-color: #e5c100;
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Product 1 -->
-    <div class="product-box">
-        <img src="https://pomf2.lain.la/f/wrqhcsvu.png" alt="Source Code.">
-        <h3>Script Luminix</h3>
-        <p>Luminix Script adalah rangkaian kode berbasis JavaScript yang dirancang untuk memberikan pengalaman pengguna yang dinamis, interaktif, dan responsif di aplikasi Whatsapp. Script ini memanfaatkan kemampuan JavaScript untuk mempermudah berbagai tugas, meningkatkan performa situs, dan menciptakan tampilan modern yang menarik.</p>
-        <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%201" target="_blank">Order via WhatsApp</a>
-    </div>
-
-    <!-- Product 2 -->
-    <div class="product-box">
-        <img src="https://pomf2.lain.la/f/bp9b2o8m.png" alt="Panel">
-        <h3>Pterodactyl Panel</h3>
-        <p>Panel Pterodactyl adalah platform open-source yang dirancang untuk mengelola server game, aplikasi, dan layanan berbasis container secara efisien. Panel ini menggunakan teknologi modern seperti Docker dan PHP untuk menawarkan pengalaman manajemen server yang fleksibel, aman, dan mudah digunakan, khususnya untuk komunitas gamer, pengembang, dan penyedia hosting.
-</p>
-        <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%202" target="_blank">Order via WhatsApp</a>
-    </div>
-
-    <!-- Product 3 -->
-    <div class="product-box">
-        <img src="https://pomf2.lain.la/f/62hkz97u.jpg" alt="Sewa">
-        <h3>Luminix Bot Order!</h3>
-        <p>Sewa Bot luminix agar group anda aman dan terkendali, terkesan elegan dengan fitur yang memadai, fitur game dan fitur fitur lainnya yang membuat group anda menjadi lebih ramai.</p>
-        <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%203" target="_blank">Order via WhatsApp</a>
+    <div class="container">
+        <h1>Script Luminix</h1>
+        <div class="image-container">
+            <img src="https://pomf2.lain.la/f/wrqhcsvu.png" alt="Script Luminix">
+        </div>
+        <p>
+            Script Luminix adalah rangkaian kode berbasis JavaScript yang dirancang untuk memberikan pengalaman pengguna yang dinamis, interaktif, dan responsif. 
+            Dengan fitur-fitur canggih seperti validasi otomatis dan animasi modern, Script Luminix akan meningkatkan efisiensi dan daya tarik aplikasi Anda.
+        </p>
+        <p>
+            Solusi ideal bagi pengembang web yang ingin menciptakan tampilan modern dan performa tinggi, serta memberikan pengalaman pengguna terbaik untuk aplikasi berbasis web.
+        </p>
+        <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Script%20Luminix" target="_blank" class="cta-button">
+            Order via WhatsApp
+        </a>
     </div>
 </body>
 </html>
