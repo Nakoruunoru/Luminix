@@ -1,0 +1,244 @@
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1c1c1e;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffcc00;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.cta-btn {
+    padding: 0.5rem 1.5rem;
+    background: #ffcc00;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background: #e6b800;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #0f0f0f, #1c1c1e);
+    color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+}
+
+.hero-content span {
+    color: #ffcc00;
+}
+
+.hero-content p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #cfcfcf;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+/* About Section */
+.about {
+    background: #1c1c1e;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Footer */
+.footer {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+/* Premium Plans */
+.premium-plans {
+    background: #f9f9f9;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.premium-plans h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.plan-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+}
+
+.plan-card h3 {
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.plan-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan-card ul li {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Pterodactyl Servers */
+.pterodactyl {
+    background: #1c1c1e;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.pterodactyl h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.server-plans {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.server-plan {
+    background: #333;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s;
+    color: white;
+}
+
+.server-plan:hover {
+    transform: translateY(-10px);
+}
+
+.server-plan h3 {
+    color: #ffcc00;
+    margin-bottom: 1rem;
+}
+
+.server-plan ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.server-plan ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.server-plan p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
