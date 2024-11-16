@@ -51,43 +51,25 @@
             background-color: #e5c100;
         }
 /* Developer Section */
- /*
-
-/* Responsive Design for Developer Section */
-@media (max-width: 768px) {
-    .developer-info {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;  /* Center text on smaller screens */
-    }
-
-    .developer-info img {
-        width: 120px;  /* Make the image smaller on mobile */
-        height: 120px;
-    }
-
-    .developer-section {
-        flex-direction: column;  /* Stack items vertically on small screens */
-        align-items: c/* Developer Section */
 .developer-section {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
     text-align: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;  /* Ensure it wraps nicely on smaller screens */
 }
 
 .developer-info {
     max-width: 600px;
     margin-left: 20px;
-    text-align: left;
+    text-align: left;  /* Align text to the left for better readability */
 }
 
 .developer-info h3 {
     font-size: 30px;
     color: #ffd700;
-    margin-bottom: 10px;
+    margin-bottom: 10px;  /* Reduced margin for better spacing */
 }
 
 .developer-info p {
@@ -112,30 +94,33 @@
 
 .developer-info img {
     border-radius: 50%;
-    width: 80px;  /* Ukuran foto lebih kecil */
-    height: 80px;  /* Ukuran foto lebih kecil */
+    width: 150px;
+    height: 150px;
     object-fit: cover;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;  /* Spasi lebih rapih */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;  /* Added margin to separate from text */
 }
 
-/* Responsif untuk Developer Section */
+/* Responsive Design for Developer Section */
 @media (max-width: 768px) {
     .developer-info {
         margin-left: 0;
         margin-top: 20px;
-        text-align: center;  /* Rata tengah untuk tampilan mobile */
+        text-align: center;  /* Center text on smaller screens */
     }
 
     .developer-info img {
-        width: 60px;  /* Ukuran foto lebih kecil di perangkat mobile */
-        height: 60px;  /* Ukuran foto lebih kecil di perangkat mobile */
+        width: 120px;  /* Make the image smaller on mobile */
+        height: 120px;
     }
 
     .developer-section {
-        flex-direction: column;  /* Tata letak vertikal pada layar kecil */
+        flex-direction: column;  /* Stack items vertically on small screens */
         align-items: center;
     }
+}
+      
+
         /* Product Box */
         .product-box {
             background: linear-gradient(145deg, #222, #111);
@@ -267,6 +252,70 @@
             color: #ccc;
             line-height: 1.6;
         }
+        .developer-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: #111;
+        }
+
+        .developer-section h2 {
+            font-size: 2.5rem;
+            color: #ffd700;
+            margin-bottom: 20px;
+        }
+
+        .developer-section .developer-card {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .developer {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 280px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .developer:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .developer img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .developer h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .developer p {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .developer a {
+            display: inline-block;
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .developer a:hover {
+            color: #e5c100;
+        }
     </style>
 </head>
 <body>
@@ -277,16 +326,20 @@
         <p>Discover the best tools and scripts to enhance your projects and server management.</p>
         <a href="#products" class="btn">Explore Products</a>
     </header>
-
     <!-- Developer Section -->
-    <div class="developer-section">
-        <img src="https://pomf2.lain.la/f/lkccsrgz.png" alt="Developer Image">
-        <div class="developer-info">
-            <h3>Meet the Developer</h3>
-            <p>Our developer, with years of experience in web development and automation, creates high-quality scripts and tools. Feel free to reach out for more information or custom requests!</p>
-            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20the%20developer" class="btn">Contact Developer</a>
-        </div>
-    </div>
+    <div class="developer-section" id="developer">
+        <h2>Meet Our Developer</h2>
+        <div class="developer-card">
+            <!-- Developer 1 -->
+            <div class="developer">
+                <img src="https://pomf2.lain.la/f/62hkz97u.jpg" alt="Developer Image">
+                <h3>John Doe</h3>
+                <p>Expert in JavaScript, server management,                 and web development. Passionate about creating innovative solutions and improving user experiences.</p>
+                <a href="https://github.com/johndoe" target="_blank">View Profile</a>
+            </div>
+            </div>
+            </div>
+
 
     <!-- Products Section -->
     <div class="product-section" id="products">
