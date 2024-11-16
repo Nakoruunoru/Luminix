@@ -51,7 +51,24 @@
             background-color: #e5c100;
         }
 /* Developer Section */
- /* Developer Section */
+ /*
+
+/* Responsive Design for Developer Section */
+@media (max-width: 768px) {
+    .developer-info {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;  /* Center text on smaller screens */
+    }
+
+    .developer-info img {
+        width: 120px;  /* Make the image smaller on mobile */
+        height: 120px;
+    }
+
+    .developer-section {
+        flex-direction: column;  /* Stack items vertically on small screens */
+        align-items: c/* Developer Section */
 .developer-section {
     display: flex;
     justify-content: center;
@@ -95,51 +112,30 @@
 
 .developer-info img {
     border-radius: 50%;
-    width: 100px;  /* Reduced image size */
-    height: 100px;  /* Reduced image size */
+    width: 80px;  /* Ukuran foto lebih kecil */
+    height: 80px;  /* Ukuran foto lebih kecil */
     object-fit: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;  /* Added margin for spacing */
+    margin-bottom: 15px;  /* Spasi lebih rapih */
 }
 
-/* Responsive Design for Developer Section */
+/* Responsif untuk Developer Section */
 @media (max-width: 768px) {
     .developer-info {
         margin-left: 0;
         margin-top: 20px;
-        text-align: center;
+        text-align: center;  /* Rata tengah untuk tampilan mobile */
     }
 
     .developer-info img {
-        width: 80px;  /* Smaller image size for mobile */
-        height: 80px;  /* Smaller image size for mobile */
+        width: 60px;  /* Ukuran foto lebih kecil di perangkat mobile */
+        height: 60px;  /* Ukuran foto lebih kecil di perangkat mobile */
     }
 
     .developer-section {
-        flex-direction: column;
+        flex-direction: column;  /* Tata letak vertikal pada layar kecil */
         align-items: center;
     }
-
-/* Responsive Design for Developer Section */
-@media (max-width: 768px) {
-    .developer-info {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;  /* Center text on smaller screens */
-    }
-
-    .developer-info img {
-        width: 120px;  /* Make the image smaller on mobile */
-        height: 120px;
-    }
-
-    .developer-section {
-        flex-direction: column;  /* Stack items vertically on small screens */
-        align-items: center;
-    }
-}
-      
-
         /* Product Box */
         .product-box {
             background: linear-gradient(145deg, #222, #111);
