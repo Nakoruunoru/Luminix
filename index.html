@@ -3,399 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Product Showcase</title>
-    <style>
-        /* Global Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #2a2a2a, #111);
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        header {
-            background: #111;
-            padding: 60px 20px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header h1 {
-            font-size: 50px;
-            font-weight: bold;
-            color: #ffd700;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        header p {
-            font-size: 20px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
-
-        header .btn {
-            padding: 15px 30px;
-            font-size: 18px;
-            color: #000;
-            background-color: #ffd700;
-            text-decoration: none;
-            border-radius: 30px;
-            transition: background-color 0.3s;
-        }
-
-        header .btn:hover {
-            background-color: #e5c100;
-        }
-/* Developer Section */
-.developer-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    text-align: center;
-    flex-wrap: wrap;  /* Ensure it wraps nicely on smaller screens */
-}
-
-.developer-info {
-    max-width: 600px;
-    margin-left: 20px;
-    text-align: left;  /* Align text to the left for better readability */
-}
-
-.developer-info h3 {
-    font-size: 30px;
-    color: #ffd700;
-    margin-bottom: 10px;  /* Reduced margin for better spacing */
-}
-
-.developer-info p {
-    font-size: 16px;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-.developer-info .btn {
-    padding: 12px 25px;
-    font-size: 16px;
-    background-color: #ffd700;
-    color: #000;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s;
-}
-
-.developer-info .btn:hover {
-    background-color: #e5c100;
-}
-
-.developer-info img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;  /* Added margin to separate from text */
-}
-
-/* Responsive Design for Developer Section */
-@media (max-width: 768px) {
-    .developer-info {
-        margin-left: 0;
-        margin-top: 20px;
-        text-align: center;  /* Center text on smaller screens */
+    <title>Home - Luminix</title><style>
+    /* Global Styles */
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #1e1e1e, #000);
+        color: #fff;
+        overflow-x: hidden;
+        line-height: 1.6;
     }
 
-    .developer-info img {
-        width: 120px;  /* Make the image smaller on mobile */
-        height: 120px;
-    }
-
-    .developer-section {
-        flex-direction: column;  /* Stack items vertically on small screens */
+    /* Header Section */
+    .header {
+        background: url('https://pomf2.lain.la/f/wrqhcsvu.png') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
     }
-}
-      
 
-        /* Product Box */
-        .product-box {
-            background: linear-gradient(145deg, #222, #111);
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            width: 320px;
-            text-align: center;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 30px;
-        }
+    .header h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
+        margin-bottom: 20px;
+    }
 
-        .product-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-        }
+    .header p {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin-bottom: 30px;
+    }
 
-        .product-box img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid #444;
-        }
+    .header a {
+        display: inline-block;
+        background: linear-gradient(90deg, #ffd700, #e5c100);
+        color: #000;
+        text-decoration: none;
+        padding: 12px 25px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
 
-        .product-box h3 {
-            font-size: 20px;
-            color: #ffd700;
-            margin: 15px 0;
-        }
+    .header a:hover {
+        background: linear-gradient(90deg, #e5c100, #ffd700);
+        transform: translateY(-3px);
+    }
 
-        .product-box p {
-            font-size: 15px;
-            color: #ccc;
-            margin-bottom: 20px;
-        }
+    /* Developer Section */
+    .developer-section {
+        padding: 60px 20px;
+        text-align: center;
+        background: #111;
+    }
 
-        .product-box a {
-            display: inline-block;
-            background: linear-gradient(90deg, #ffd700, #e5c100);
-            color: #000;
-            text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 30px;
-            font-size: 16px;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
+    .developer-section h2 {
+        font-size: 2.8rem;
+        color: #ffd700;
+        margin-bottom: 40px;
+        text-shadow: 1px 1px 10px rgba(255, 215, 0, 0.5);
+    }
 
-        .product-box a:hover {
-            background: linear-gradient(90deg, #e5c100, #ffd700);
-            transform: translateY(-3px);
-        }
+    .developer-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 40px;
-            }
+    .developer {
+        background: #1e1e1e;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        width: 300px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-            .developer-info {
-                margin-left: 0;
-                margin-top: 20px;
-                text-align: left;
-            }
+    .developer:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+    }
+.developer img {
+        width: 110px;
+        height: 110px;
+        border-radius: 5px; /* Membuat sudut sedikit melengkung, jika tidak ingin lengkung gunakan 0 */
+        margin-bottom: 15px;
+        object-fit: cover; /* Pastikan gambar sesuai ukuran kotak */
+        border: 2px solid #ffd700; /* Tambahkan border emas untuk aksen */
+    }
 
-            .product-box {
-                width: 100%;
-            }
 
-            .product-box h3 {
-                font-size: 18px;
-            }
-        }
-        /* About Section */
-        .about-section {
-            padding: 50px 20px;
-            text-align: center;
-            background: #111;
-        }
+    .developer h3 {
+        font-size: 1.8rem;
+        color: #ffd700;
+        margin-bottom: 10px;
+    }
 
-        .about-section h2 {
-            font-size: 2.5rem;
-            color: #ffd700;
-            margin-bottom: 20px;
-        }
+    .developer p {
+        font-size: 1rem;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
 
-        .about-section p {
-            font-size: 1rem;
-            color: #ccc;
-            margin: 0 auto 40px;
-            max-width: 700px;
-            line-height: 1.8;
-        }
+    .developer a {
+        display: inline-block;
+        color: #ffd700;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 
-        .features-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    .developer a:hover {
+        color: #e5c100;
+    }
 
-        .feature-box {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            width: 280px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    /* About Section */
+    .about-section {
+        background: #1e1e1e;
+        padding: 60px 20px;
+        color: #fff;
+    }
 
-        .feature-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
+    .about-section h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 40px;
+        color: #ffd700;
+        text-shadow: 1px 1px 10px rgba(255, 215, 0, 0.5);
+    }
 
-        .feature-box img {
-            width: 60px;
-            margin-bottom: 15px;
-        }
+    .about-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+        padding: 10px 15px;
+        border-radius: 8px;
+        background: #111;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
 
-        .feature-box h3 {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
+    .about-item img {
+        width: 40px;
+        height: 40px;
+    }
 
-        .feature-box p {
-            font-size: 0.9rem;
-            color: #ccc;
-            line-height: 1.6;
-        }
-        .developer-section {
-            padding: 40px 20px;
-            text-align: center;
-            background: #111;
-        }
+    .about-item p {
+        font-size: 1.1rem;
+        color: #ccc;
+        margin: 0;
+    }
 
-        .developer-section h2 {
-            font-size: 2.5rem;
-            color: #ffd700;
-            margin-bottom: 20px;
-        }
+    .about-item span {
+        color: #ffd700;
+        font-weight: bold;
+    }
 
-        .developer-section .developer-card {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    /* Footer Section */
+    .footer {
+        background: #000;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        color: #666;
+        border-top: 2px solid #ffd700;
+    }
+</style>
 
-        .developer {
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            width: 280px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .developer:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
-        }
-
-        .developer img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .developer h3 {
-            font-size: 1.5rem;
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-
-        .developer p {
-            font-size: 0.9rem;
-            color: #ccc;
-            margin-bottom: 15px;
-        }
-
-        .developer a {
-            display: inline-block;
-            color: #ffd700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .developer a:hover {
-            color: #e5c100;
-        }
-    </style>
 </head>
 <body>
-
     <!-- Header Section -->
-    <header>
-        <h1>Welcome to Our Product Showcase</h1>
-        <p>Discover the best tools and scripts to enhance your projects and server management.</p>
-        <a href="#products" class="btn">Explore Products</a>
-    </header>
+    <div class="header">
+        <h1>Welcome to Luminix</h1>
+        <p>Explore our advanced tools and services, including powerful scripts, secure panels, and customizable bots to elevate your online experience.</p>
+        <a href="#products">Explore Products</a>
+    </div>
+
     <!-- Developer Section -->
-
-            
-
-    <!-- Products Section -->
-    <div class="product-section" id="products">
-        <!-- Product 1 -->
-        <div class="product-box">
-            <img src="https://pomf2.lain.la/f/wrqhcsvu.png" alt="Script Luminix">
-            <h3>Script Luminix</h3>
-            <p>
-                A JavaScript-based script to enhance your WhatsApp experience with dynamic, interactive features.
-            </p>
-            <a href="produk1.html" target="_blank">View Details</a>
-            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%201" target="_blank">Order via WhatsApp</a>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="product-box">
-            <img src="https://pomf2.lain.la/f/bp9b2o8m.png" alt="Pterodactyl Panel">
-            <h3>Pterodactyl Panel</h3>
-            <p>
-                Manage your game servers and applications with this open-source platform.
-            </p>
-            <a href="product2.html" target="_blank">View Details</a>
-            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%202" target="_blank">Order via WhatsApp</a>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="product-box">
-            <img src="https://pomf2.lain.la/f/62hkz97u.jpg" alt="Luminix Bot Order">
-            <h3>Luminix Bot Order</h3>
-            <p>
-                Rent Luminix Bot to make your group secure, organized, and interactive.
-            </p>
-            <a href="product3.html" target="_blank">View Details</a>
-            <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Product%203" target="_blank">Order via WhatsApp</a>
+    <div class="developer-section" id="developer">
+        <h2>Meet Our Developer</h2>
+        <div class="developer-card">
+            <!-- Developer 1 -->
+            <div class="developer">
+                <img src="https://pomf2.lain.la/f/62hkz97u.jpg" alt="Developer Image">
+                <h3>John Doe</h3>
+                <p>Expert in JavaScript, server management,and bot development, John ensures every product is crafted with precision and performance in mind.</p>
+                <a href="https://instagram.com/johndoe" target="_blank">Follow on Instagram</a>
+            </div>
+            <!-- Developer 2 -->
+            <div class="developer">
+                <img src="https://pomf2.lain.la/f/bp9b2o8m.png" alt="Developer Image">
+                <h3>Jane Smith</h3>
+                <p>Specialized in UI/UX design and front-end development, Jane creates seamless and visually appealing user interfaces.</p>
+                <a href="https://instagram.com/janesmith" target="_blank">Follow on Instagram</a>
+            </div>
         </div>
     </div>
-  <!-- About Section -->
+
+    <!-- About Section -->
     <div class="about-section" id="about">
         <h2>About Luminix</h2>
-        <p>
-            Luminix is dedicated to providing innovative tools and services for your digital needs. 
-            From modern scripts to reliable server panels and versatile bots, our mission is to enhance your online experience.
-        </p>
-        <div class="features-container">
-            <!-- Feature 1 -->
-            <div class="feature-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/2468/2468197.png" alt="Icon 1">
-                <h3>Advanced Tools</h3>
-                <p>
-                    Explore cutting-edge tools designed for seamless integration and optimal performance across various platforms.
-                </p>
-            </div>
-            <!-- Feature 2 -->
-            <div class="feature-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/1645/1645266.png" alt="Icon 2">
-                <h3>Secure Panels</h3>
-                <p>
-                    Manage your servers with our secure, reliable, and user-friendly panels tailored to your needs.
-                </p>
-            </div>
-            <div class="feature-box">
-                <img src="https://cdn-icons-png.flaticon.com/512/3875/3875142.png" alt="Icon 2">
-                <h3>Secure Panels</h3>
-                <p>
-                    Manage your servers with our secure, reliable, and user-friendly panels tailored to your needs.
-                </p>
-            </div>
-      
+        <div class="about-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2917/2917999.png" alt="Icon" style="width: 40px; margin-right: 15px;">
+            <p><span>Luminix</span> provides advanced digital solutions, including script development, server panels, and bot customization, all tailored to meet your specific needs.</p>
+        </div>
+        <div class="about-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/2468/2468197.png" alt="Icon" style="width: 40px; margin-right: 15px;">
+            <p>Our products are built with cutting-edge technology to deliver high performance, security, and ease of use.</p>
+        </div>
+        <div class="about-item">
+            <img src="https://cdn-icons-png.flaticon.com/512/3875/3875142.png" alt="Icon" style="width: 40px; margin-right: 15px;">
+            <p>Whether you're a gamer, developer, or business owner, <span>Luminix</span> empowers you to achieve your goals effortlessly.</p>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 Luminix. All rights reserved. Designed with care by our passionate team.</p>
+    </div>
 </body>
-        </html>
+</html>
