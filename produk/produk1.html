@@ -3,106 +3,161 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Script Luminix Details</title>
+    <title>Products - Luminix</title>
     <style>
-        /* Global Styling */
+        /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1a1a1a, #000);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e1e1e, #000);
             color: #fff;
+            overflow-x: hidden;
         }
 
-        /* Container Styling */
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
+        /* Products Header Section */
+        .products-header {
+            background: url('https://pomf2.lain.la/f/1grm6sm7.png') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
             padding: 20px;
-            background: #111;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .products-header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .products-header p {
+            font-size: 1.2rem;
+            margin: 15px 0 30px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 60px 20px;
             text-align: center;
         }
 
-        /* Heading Styling */
-        h1 {
+        .products-section h2 {
             font-size: 2.5rem;
+            color: #ffd700;
             margin-bottom: 20px;
-            background: linear-gradient(90deg, #ffd700, #e5c100);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
-        /* Image Styling */
-        .image-container img {
+        .products-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .product-card img {
             width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
 
-        /* Paragraph Styling */
-        p {
-            font-size: 1.1rem;
-            line-height: 1.8;
+        .product-card h3 {
+            font-size: 1.5rem;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
             color: #ccc;
-            text-align: justify;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        /* Button Styling */
-        .cta-button {
+        .product-card a {
             display: inline-block;
             background: linear-gradient(90deg, #ffd700, #e5c100);
             color: #000;
             text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 50px;
-            font-size: 1.2rem;
+            padding: 10px 15px;
+            font-size: 1rem;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 25px;
+            transition: all 0.3s ease;
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+        .product-card a:hover {
+            background: linear-gradient(90deg, #e5c100, #ffd700);
+            transform: scale(1.05);
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            p {
-                font-size: 1rem;
-            }
-            .cta-button {
-                font-size: 1rem;
-                padding: 10px 15px;
-            }
+        /* Footer Section */
+        .footer {
+            background: #000;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Script Luminix</h1>
-        <div class="image-container">
-            <img src="https://pomf2.lain.la/f/wrqhcsvu.png" alt="Script Luminix">
+    <!-- Products Header -->
+    <div class="products-header">
+        <h1>Our Products</h1>
+        <p>Discover a wide range of advanced tools, scripts, and customizable services designed for you.</p>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products-section">
+        <h2>Featured Products</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Product+1" alt="Product 1">
+                <h3>Custom Script</h3>
+                <p>A powerful script tailored for your unique needs.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Product+2" alt="Product 2">
+                <h3>Secure Panel</h3>
+                <p>Manage your systems with ease and robust security.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png?text=Product+3" alt="Product 3">
+                <h3>Bot Customization</h3>
+                <p>Automate and enhance your processes with custom bots.</p>
+                <a href="#">Learn More</a>
+            </div>
         </div>
-        <p>
-            Script Luminix adalah rangkaian kode berbasis JavaScript yang dirancang untuk memberikan pengalaman pengguna yang dinamis, interaktif, dan responsif. 
-            Dengan fitur-fitur canggih seperti validasi otomatis dan animasi modern, Script Luminix akan meningkatkan efisiensi dan daya tarik aplikasi Anda.
-        </p>
-        <p>
-            Solusi ideal bagi pengembang web yang ingin menciptakan tampilan modern dan performa tinggi, serta memberikan pengalaman pengguna terbaik untuk aplikasi berbasis web.
-        </p>
-        <a href="https://wa.me/18148012005?text=Hello%2C%20I%20am%20interested%20in%20Script%20Luminix" target="_blank" class="cta-button">
-            Order via WhatsApp
-        </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Luminix. All rights reserved. Designed with care by our passionate team.</p>
     </div>
 </body>
 </html>
