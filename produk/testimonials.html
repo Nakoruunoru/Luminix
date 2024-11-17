@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,11 +30,11 @@
         }
 
         .testimonials {
-            padding: 40px 20px;
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             gap: 20px;
-            justify-content: center;
+            padding: 40px 20px;
         }
 
         .testimonial-box {
@@ -40,8 +42,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            width: 45%; /* 2 columns */
-            max-width: 500px;
+            width: calc(33.333% - 20px); /* 3 testimonials per row */
+            max-width: 400px;
             text-align: center;
             color: #fff;
             transition: transform 0.3s ease;
@@ -52,9 +54,10 @@
         }
 
         .testimonial-box img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0; /* Kotak */
             margin-bottom: 15px;
             border: 3px solid #ffd700;
         }
@@ -87,6 +90,18 @@
         .back-to-home a:hover {
             background: linear-gradient(90deg, #e5c100, #ffd700);
         }
+
+        @media (max-width: 768px) {
+            .testimonial-box {
+                width: calc(50% - 20px); /* 2 testimonials per row for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .testimonial-box {
+                width: 100%; /* 1 testimonial per row for very small screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -118,7 +133,7 @@
     </div>
 
     <div class="back-to-home">
-        <a href="./index.html">Back to Home</a>
+        <a href="../index.html">Back to Home</a>
     </div>
 </body>
 </html>
